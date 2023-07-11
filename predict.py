@@ -129,8 +129,6 @@ class Predictor(BasePredictor):
         
 
 
-
-
 def make_scheduler(name, config):
     return {
         "PNDM": PNDMScheduler.from_config(config),
