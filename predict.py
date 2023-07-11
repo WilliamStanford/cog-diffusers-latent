@@ -54,7 +54,7 @@ class Predictor(BasePredictor):
         
         negative_prompt: str = Input(
             description="Specify things to not see in the output",
-            default=None,
+            default="",
         ),
         width: int = Input(
             description="Width of output image. Maximum size is 1024x768 or 768x1024 because of memory limits",
