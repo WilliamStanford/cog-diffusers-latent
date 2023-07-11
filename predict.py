@@ -105,6 +105,7 @@ class Predictor(BasePredictor):
             )
 
         self.pipe.scheduler = make_scheduler(scheduler, self.pipe.scheduler.config)
+        prompt_embedding = torch.load(prompt_embedding)
 
         generator = torch.Generator("cuda").manual_seed(seed)
         output = self.pipe(
